@@ -30,10 +30,10 @@ endif
 
 all: $(BUILD) $(EXE) $(DEBUG)
 
-$(EXE): $(SRC) $(RAYLIB)
+$(EXE): $(SRC) $(HEADERS) $(RAYLIB)
 	$(CC) $(DEFS) $(CFLAGS) -o $(EXE) $(SRC) $(LFLAGS)
 
-$(DEBUG): $(SRC) $(RAYLIB)
+$(DEBUG): $(SRC) $(HEADERS) $(RAYLIB)
 	$(CC) $(DEFS) $(DFLAGS) -o $(DEBUG) $(SRC) $(LFLAGS)
 
 $(RAYLIB):
